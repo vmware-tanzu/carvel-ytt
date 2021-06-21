@@ -65,7 +65,7 @@ func NewCmd(o *Options) *cobra.Command {
 	cmd.Flags().BoolVarP(&o.StrictYAML, "strict", "s", false, "Configure to use _strict_ YAML subset")
 	cmd.Flags().BoolVar(&o.Debug, "debug", false, "Enable debug output")
 	cmd.Flags().BoolVar(&o.InspectFiles, "files-inspect", false, "Inspect files")
-	cmd.Flags().BoolVar(&o.SchemaEnabled, "enable-experiment-schema", false, "Enable experimental schema features")
+	cmd.Flags().BoolVar(&o.SchemaEnabled, "enable-experiment-schema", true, "Enable experimental schema features")
 
 	o.BulkFilesSourceOpts.Set(cmd)
 	o.RegularFilesSourceOpts.Set(cmd)
